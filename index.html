@@ -1,79 +1,58 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Registration form</title>
-        </head>
+<head>
+    <title>Login And Registration Form</title>
+    <link rel="stylesheet" href="style.css">
 
-        <body>
-            <form action="">
-                <table align="center" bgcolor="Navy-Blue" height="500" width="500">
-                    <tr>
-                        <td>First Name</td>
-                        <td>:</td>
-                        <td><input type="text" placeholder="name" size"40"></td>
-                    </tr>
-                    <tr>
-                        <td>Last Name</td>
-                        <td>:</td>
-                        <td><input type="text" placeholder="Last name" size"40"></td>
-                    </tr>
-                    <tr>
-                        <td>Email</td>
-                        <td>:</td>
-                        <td><input type="text" placeholder="Email Address" size"40"></td>
-                    </tr>
-                    <tr>
-                        <td>Password</td>
-                        <td>:</td>
-                        <td><input type="text" placeholder="password" size"40"></td>
-                    </tr>
-                    <tr>
-                        <td>Confirm password</td>
-                        <td>:</td>
-                        <td><input type="text" placeholder="Confirm password" size"40"></td>
-                    </tr>
-                    <td>Date of Birth</td>
-                    <td>:</td>
-                    <td>
-                        <select name="Day" id="Day">
-                           <option value="Day">Day</option>
-                           <option value="1">1</option>
-                           <option value="2">2</option>
-                           <option value="3">3</option>
-                           <option value="4">4</option>
-                           <option value="5">5</option>
-                           </select>
-                           <select name="Month" id="Month">
-                            <option value="Month">Month</option>
-                            <option value="1">Jan</option>
-                            <option value="2">FEB</option>
-                            <option value="3">March</option>
-                            <option value="4">April</option>
-                            <option value="5">May</option>
-                            </select>
-                            <select name="year" id="year">
-                                <option value="year">year</option>
-                                <option value="1">1995</option>
-                                <option value="2">1996</option>
-                                <option value="3">1997/option>
-                                <option value="4">1998</option>
-                                <option value="5">1999</option>
-                                </select>
-                                </td>
-                                
-                                <tr>
-                                <td>Gender:</td>
-                                <td>:</td>
-                                <td>
-                                    <input type="Radio" name="male" value="Gender"><span>male</span>
-                                    <input type="Radio" name="Female" value="Gender"><span>Female</span>
-                                    </td>
-                                </tr>
-                                <td><input type="submit" value="submit"></td>
-                                </form>
-                                </body>
-                            </table>
-                            
-                            </head>
-                               </html>
+</head>
+<body>
+    <div class="hero">
+        <div class="form-box">
+        <div class="button-box">
+            <div id="btn"></div>
+            <button type="button" class="toggle-btn" onclick="login()">login</button>
+            <button type="button" class="toggle-btn" onclick="registration()">registration</button>
+        </div>
+    
+    <div class="social-icons">
+        <img src="fb.png">
+        <img src="tw.png">
+        <img src="gp.png">
+    </div>
+    <form  id="login" class="input-group">
+        <input type="text" class="input-field" placeholder="User Id" required>
+        <input type="text" class="input-field" placeholder="enter password" required>
+        <input type="checkbox" class="check-box"><span>Remember password</span>
+        <button type="submit" class="submit-btn">log in</button>
+
+    </form>
+    <form  id="register" class="input-group">
+        <input type="text" class="input-field" placeholder="User Id" required>
+        <input type="email" class="input-field" placeholder="email Id" required>
+        <input type="email" class="input-field" placeholder="enter password" required>
+        <input type="checkbox" class="check-box"><span> I agree to the terms and conditions</span>
+        <button type="submit" class="submit-btn">Register</button>
+
+    </form>
+    </div>
+</div>
+<script>
+    var x = document.getElementById("login");
+    var y = document.getElementById("register");
+    var z = document.getElementById("btn");
+
+    function register(){
+        x.style.left = "-400px";
+        y.style.left= "50px";
+        z.style.left = "110px";
+
+    }
+    function login(){
+        x.style.left = "50px";
+        y.style.left= "450px";
+        z.style.left = "0";
+        
+    }
+</script>
+
+</body>
+</html>
